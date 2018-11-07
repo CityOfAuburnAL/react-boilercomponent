@@ -1,16 +1,17 @@
 {
-  "name": "coa-calendar",
+  "name": "coa-component",
   "version": "1.0.0",
-  "description": "React Component to display City calendar",
+  "description": "React Component",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start http://localhost:3001/ & webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "build": "npm run transpile && webpack --mode production",
+    "deploy-demo": "gh-pages -d demo/dist",
+    "publish-demo": "npm run build && npm run deploy-demo",
+    "deploy": "npm run publish-demo && node ./deploy.js"
   },
   "author": "Griffin",
   "license": "ISC",
@@ -29,6 +30,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
+    "fs-extra": "^7.0.1",
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.6.0",
