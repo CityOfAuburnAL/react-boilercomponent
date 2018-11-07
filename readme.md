@@ -1,4 +1,4 @@
-##Installation
+## Installation
 
 `git clone -o boilerplate https://github.com/CityOfAuburnAL/react-boilercomponent.git ./new-component`
 
@@ -6,7 +6,7 @@
 
 `npm install`
 
-##Getting Started
+## Getting Started
 
 > Edit package.json
 
@@ -22,7 +22,7 @@
 
 * `npm start`
 
-##Deployment
+## Deployment
 
 > Demo
 
@@ -51,7 +51,7 @@ Then include new-component.
 
 `<script src="https://static.auburnalabama.org/assets/react-components/coa-component/index.js"></script>`
 
-##Commands
+## Commands
 
 * `npm start`
 * `npm run transpile`
@@ -59,6 +59,6 @@ Then include new-component.
 * `npm run deploy-demo`
 * `npm run publish-demo`
 
-##Thanks
+## Thanks
 
 * https://medium.com/dailyjs/building-a-react-component-with-webpack-publish-to-npm-deploy-to-github-guide-6927f60b3220
