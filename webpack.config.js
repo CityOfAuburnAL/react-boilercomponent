@@ -1,5 +1,6 @@
 /*** webpack.config.js ***/
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const combineLoaders = require("webpack-combine-loaders");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
@@ -40,11 +41,12 @@ module.exports = {
             }
         ]
     },
-    plugins: [htmlWebpackPlugin],
+    plugins: [htmlWebpackPlugin, new webpack.HotModuleReplacementPlugin()],
     resolve: {
         extensions: [".js", ".jsx", ".css"]
     },
     devServer: {
-        port: 3001
+        port: 3001,
+        hot: true
     }
 };

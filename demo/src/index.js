@@ -6,3 +6,5 @@ const App = () => (
     <MyComponent />
 );
 render(<App />, document.getElementById("root"));
+
+module.hot.accept();
