@@ -1,6 +1,7 @@
 /*** webpack.config.js ***/
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const combineLoaders = require("webpack-combine-loaders");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template: path.join(__dirname, "demo/src/index.html"),
     filename: "./index.html"
@@ -19,14 +20,29 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: ['babel-loader','eslint-loader']
+            },
+            {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                loader: combineLoaders([
+                    {
+                      loader: 'style-loader'
+                    }, {
+                      loader: 'css-loader',
+                      query: {
+                        modules: true,
+                        localIdentName: '[name]__[local]___[hash:base64:5]'
+                      }
+                    }
+                  ])
             }
         ]
     },
     plugins: [htmlWebpackPlugin],
     resolve: {
-        extensions: [".js", ".jsx"]
+        extensions: [".js", ".jsx", ".css"]
     },
     devServer: {
         port: 3001
