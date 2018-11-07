@@ -7,4 +7,13 @@ const App = () => (
 );
 render(<App />, document.getElementById("root"));
 
-module.hot.accept();
+//only needed in dev, for hot-reloading
+if (module.hot) {
+    module.hot.accept();
+
+    window.addEventListener('message', e => {
+        if ('production' !== process.env.NODE_ENV && e && e.data && e.data.type === "webpackInvalid") {
+            console.clear();
+        }
+    });
+}
