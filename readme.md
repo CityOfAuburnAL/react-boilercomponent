@@ -22,6 +22,20 @@
 
 * `npm start`
 
+## AJAX
+
+> Base component doesn't include ajax helper, if needed and need to support IE below is the current preferred methodolgy
+
+`npm i --save-dev whatwg-fetch promise-polyfill`
+
+> Add the following to index.js
+
+`import 'whatwg-fetch';`
+
+`import Promise from 'promise-polyfill';`
+
+`if (!window.Promise) { window.Promise = Promise; }`
+
 ## Deployment
 
 > Demo
