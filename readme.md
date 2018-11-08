@@ -22,6 +22,12 @@
 
 * `npm start`
 
+## Common Issues
+
+> `npm start`
+
+* Verify you are not currently using port 3001. This is hardcoded and it will fail if it's unavailable.
+
 ## AJAX
 
 > Base component doesn't include ajax helper, if needed and need to support IE below is the current preferred methodolgy
