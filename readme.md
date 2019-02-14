@@ -26,11 +26,11 @@
 
 > `npm start`
 
-* Verify you are not currently using port 3001. This is hardcoded and it will fail if it's unavailable.
+* Verify you are not currently using port 3001. This is hardcoded and it will fail if it's unavailable.`
 
 ## AJAX
 
-> Base component doesn't include ajax helper, if needed and need to support IE below is the current preferred methodolgy
+> Base component doesn't include ajax helper, if needed and need to support IE, below is the current preferred methodolgy
 
 `npm i --save-dev whatwg-fetch promise-polyfill`
 
@@ -56,6 +56,8 @@ Available at https://cityofauburnal.github.io/react-boilercomponent/
 * `npm publish`
 
 > City of Auburn Website
+
+Below is outdated - this won't work. There is a project that hasn't been checked in yet which will build/deploy. Update this docs after that repo has a location...
 
 `npm run deploy`
 
