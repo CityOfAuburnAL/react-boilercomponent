@@ -4,6 +4,12 @@
 
 `git remote add origin //repository-url`
 
+`git push -u origin -all` Untested if this is required for the next statement
+
+`git fetch origin` Can't track the new repo until it's been fetched
+
+`git branch -u origin/master` Sets master branch to track new repo, so that sync/fetch default correctly
+
 `npm install`
 
 ## Getting Started
